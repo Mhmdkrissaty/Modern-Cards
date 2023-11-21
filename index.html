@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        cursor: none;
+        background-color: #040C26;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .div {
+        height: 400px;
+        width: 766px;
+        border-radius: 18px;
+        border: 2px solid #fff;
+        overflow: auto;
+        resize: both;
+      }
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(200, 83, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #040C26">
+    <div class="custom-cursor"></div>
+    <div class="div">
+      <main class="main flow">
+        <h1 class="main__heading">Pricing</h1>
+        <div class="main__singleCards singleCards">
+          <div class="singleCards__inner">
+            <div class="singleCards__singleCard singleCard">
+              <h2 class="singleCard__heading">Basic</h2>
+              <p class="singleCard__price">$9.99</p>
+              <ul role="list" class="singleCard__bullets flow">
+                <li>Access to standard workouts and nutrition plans</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#basic" class="singleCard__cta cta">Get Started</a>
+            </div>
+      
+            <div class="singleCards__singleCard singleCard">
+              <h2 class="singleCard__heading">Pro</h2>
+              <p class="singleCard__price">$19.99</p>
+              <ul role="list" class="singleCard__bullets flow">
+                <li>Access to advanced workouts and nutrition plans</li>
+                <li>Priority Email support</li>
+                <li>Exclusive access to live Q&A sessions</li>
+              </ul>
+              <a href="#pro" class="singleCard__cta cta">Upgrade to Pro</a>
+            </div>
+      
+            <div class="singleCards__singleCard singleCard">
+              <h2 class="singleCard__heading">Ultimate</h2>
+              <p class="singleCard__price">$29.99</p>
+              <ul role="list" class="singleCard__bullets flow">
+                <li>Access to all premium workouts and nutrition plans</li>
+                <li>24/7 Priority support</li>
+                <li>1-on-1 virtual coaching session every month</li>
+                <li>Exclusive content and early access to new features</li>
+              </ul>
+              <a href="#ultimate" class="singleCard__cta cta">Go Ultimate</a>
+            </div>
+          </div>
+          
+          <div class="front singleCards__inner"></div>
+        </div>
+      </main>
+    </div>
+    <script>
+      // JavaScript to move the curƒsor
+      document.addEventListener("mousemove", function (e) {
+        var cursor = document.querySelector(".custom-cursor");
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+    </script>
+     <script type = "text/javascript" src="script.js"></script>
+  </body>
+</html>
